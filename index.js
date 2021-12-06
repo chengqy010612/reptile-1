@@ -40,6 +40,7 @@ async function detailPage(url, title){   //具体页面
             let ws = fs.createWriteStream(writePath)
             axios.get(imgUrl,{responseType:'stream'}).then(res => {
                 res.data.pipe(ws)
+                
             })
         })
     })
